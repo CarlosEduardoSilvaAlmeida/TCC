@@ -1,0 +1,23 @@
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Caches de Python e Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Dados baixados ou copiados localmente (ver data/README.md)
+data/raw/
+
+# Saídas regeneradas pelos notebooks
+outputs/
+
+# Arquivos temporários e de sistema
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
