@@ -44,17 +44,13 @@ Abra um notebook em `notebooks/` e execute *Kernel → Restart Kernel and Run Al
 **Automatizada (todos os notebooks, modo rápido)**, a partir da raiz do repositório:
 
 ```bash
-jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=3600 notebooks/01_busca_classica_quantica.ipynb notebooks/02_aprendizado_iris.ipynb notebooks/03_aprendizado_wine_quality.ipynb
+jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=3600 notebooks/01_busca_classica_quantica.ipynb notebooks/02_aprendizado_iris.ipynb
 ```
 
 **Modo completo.** Cada notebook tem `MODO = "rapido"` como padrão. O modo completo usa mais repetições, instâncias maiores, várias sementes de divisão e o Wine Quality inteiro. Para ativá-lo sem editar os notebooks, defina a variável de ambiente antes de iniciar o Jupyter ou o `nbconvert`:
 
 ```powershell
-$env:TCC_MODO = "completo"   # Windows (PowerShell)
-```
-
-```bash
-export TCC_MODO=completo     # Linux / macOS
+$env:TCC_MODO = "completo"   # PowerShell
 ```
 
 O modo completo demora mais que o rápido. Os tempos medidos do modo rápido estão em `VALIDATION.md`.
