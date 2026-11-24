@@ -4,21 +4,14 @@ Repositório complementar ao trabalho de conclusão de curso Computação Quânt
 
 ## Conteúdo
 
-| Notebook                                        | Tópicos                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `notebooks/01_busca_classica_quantica.ipynb`  | Busca exaustiva e aleatorizada; Grover, com interpretação geométrica, domínio não potência de dois e BBHT; mínimo de Dürr e Høyer, com oráculo reversível e orçamento; BFS, DFS, A* e passeio aleatório em um toro implícito; DTQW na reta, no hipercubo e no toro; Minimax, redução AND-OR e fórmulas NAND; CTQW na reta e no toro; avaliação NAND por espalhamento (Farhi, Goldstone e Gutmann) |
-| `notebooks/02_aprendizado_iris.ipynb`         | Iris (versicolor contra virginica): Dummy, SVM linear, SVM RBF, MLP, QSVM com kernel de fidelidade, VQC com recarregamento de dados, platôs estéreis                                                                                                                                                                                                                                                               |
-| `notebooks/03_aprendizado_wine_quality.ipynb` | Wine Quality, tintos (`quality >= 6` contra `< 6`): os mesmos modelos com PCA para 4 componentes, mais o controle clássico com os 11 atributos originais                                                                                                                                                                                                                                                        |
-
-Documentos de apoio:
-
-- `ARCHITECTURE.md`: convenções, contratos das funções, decisões e orientações para expansões.
-- `VALIDATION.md`: comandos executados, versões, verificações e tempos medidos.
-- `data/README.md`: fontes, licenças, aquisição e transformações dos dados.
+| Notebook                                       | Tópicos                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `notebooks/01_busca_classica_quantica.ipynb` | Busca exaustiva e aleatorizada; Grover, com interpretação geométrica, domínio não potência de dois e BBHT; mínimo de Dürr e Høyer, com oráculo reversível e orçamento; BFS, DFS, A* e passeio aleatório em um toro implícito; DTQW na reta, no hipercubo e no toro; Minimax, redução AND-OR e fórmulas NAND; CTQW na reta e no toro; avaliação NAND por espalhamento (Farhi, Goldstone e Gutmann) |
+| `notebooks/02_aprendizado_iris.ipynb`        | Iris: SVM linear, SVM RBF, MLP, QSVM com kernel de fidelidade, VQC com recarregamento de dados, platôs estéreis                                                                                                                                                                                                                                                                                                   |
 
 ## Instalação
 
-São necessários Python 3.13 (versão validada) e acesso à internet para instalar os pacotes e baixar o Wine Quality. Os pacotes fixados em `requirements.txt` exigem Python ≥ 3.12.
+São necessários Python 3.13. Os pacotes necessários estão em `requirements.txt`.
 
 **Windows (PowerShell)**
 
@@ -69,7 +62,6 @@ O modo completo demora mais que o rápido. Os tempos medidos do modo rápido est
 ## Dados
 
 - **Iris:** carregado de `sklearn.datasets.load_iris`, sem download.
-- **Wine Quality:** baixado da UCI na primeira execução e guardado em `data/raw/winequality-red.csv`. Sem internet, coloque manualmente `wine+quality.zip` ou `winequality-red.csv` em `data/raw/`. Os detalhes estão em `data/README.md`.
 
 ## Saídas
 
@@ -83,7 +75,6 @@ Os notebooks criam automaticamente `outputs/<notebook>/figuras/` (PNG) e `output
 ├── requirements.txt
 ├── .gitignore
 ├── data/
-│   └── README.md
 └── notebooks/
     ├── 01_busca_classica_quantica.ipynb
     └── 02_aprendizado_iris.ipynb
